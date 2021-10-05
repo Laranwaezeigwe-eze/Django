@@ -10,7 +10,7 @@ from .models import City
 
 def home(request):
     url = 'http://api.openweathermap.org/data/2.5/weather?q={}&units=imperial' \
-          '&appid=7ba35eae9cc34fcef73b50ca920041e2'
+          '&appid={Api Key}'
     cities = City.objects.all()
     if request.method == 'POST':
         form = CityForm(request.POST)
